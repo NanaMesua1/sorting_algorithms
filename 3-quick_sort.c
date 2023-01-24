@@ -1,10 +1,12 @@
 #include "sort.h"
+
 /**
 *swap - the positions of two elements into an array
 *@array: array
 *@item1: array element
 *@item2: array element
 */
+
 void swap(int *array, ssize_t item1, ssize_t item2)
 {
 	int tmp;
@@ -13,6 +15,7 @@ void swap(int *array, ssize_t item1, ssize_t item2)
 	array[item1] = array[item2];
 	array[item2] = tmp;
 }
+
 /**
  *lomuto_partition - lomuto partition sorting scheme implementation
  *@array: array
@@ -45,6 +48,7 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 	}
 	return (current);
 }
+
 /**
  *qs - qucksort algorithm implementation
  *@array: array
@@ -65,6 +69,7 @@ void qs(int *array, ssize_t first, ssize_t last, int size)
 		qs(array, position + 1, last, size);
 	}
 }
+
 /**
  *quick_sort - prepare the terrain to quicksort algorithm
  *@array: array
